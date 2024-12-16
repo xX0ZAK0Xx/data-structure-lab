@@ -15,7 +15,7 @@ void addAtBeginning(struct Node** head, int newValue) {
 
 void addAtEnd(struct Node** head, int newValue) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* last = *head;
+    struct Node* node = *head;
     newNode->value = newValue;
     newNode->next = NULL;
 
@@ -24,11 +24,11 @@ void addAtEnd(struct Node** head, int newValue) {
         return;
     }
 
-    while (last->next != NULL) {
-        last = last->next;
+    while (node->next != NULL) {
+        node = node->next;
     }
 
-    last->next = newNode;
+    node->next = newNode;
 }
 
 void printList(struct Node* head) {
