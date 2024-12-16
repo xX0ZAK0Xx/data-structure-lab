@@ -46,6 +46,7 @@ int main() {
     push(&s1, 5);
     push(&s1, 3);
     push(&s1, 10);
+    push(&s1, 2);
     printf("Minimum element after pushes: %d\n", getMin(&s1));
     pop(&s1);
     printf("Minimum element after one pop: %d\n", getMin(&s1));

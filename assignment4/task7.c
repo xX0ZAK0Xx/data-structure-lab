@@ -43,7 +43,7 @@ void sortStack(struct Stack* s) {
     while (!isEmpty(s)) {
         int temp = pop(s);
 
-        while (!isEmpty(&tempStack) && peek(&tempStack) > temp) {
+        while (!isEmpty(&tempStack) && peek(&tempStack) < temp) {
             push(s, pop(&tempStack));
         }
 
